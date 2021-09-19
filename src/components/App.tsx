@@ -1,10 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Link, Switch, Route, Redirect} from "react-router-dom";
-import { Nav } from 'react-bootstrap';
 import CompanyIndex from './company/CompanyIndex';
 import CountryIndex from './country/CountryIndex';
 import PaymentTypeIndex from './paymentType/PaymentTypeIndex';
 import InvoiceIndex from './invoice/InvoiceIndex';
+import TariffIndex from "./tariff/TariffIndex";
+import VatIndex from "./vat/VatIndex";
 
 export default class App extends React.Component<any, any> {
     render = () => {
@@ -13,27 +14,35 @@ export default class App extends React.Component<any, any> {
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link to={"/company"} className="nav-link">Companies</Link>
+                            <Link to={"/companies"} className="nav-link">Companies</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={"/country"} className="nav-link">Country</Link>
+                            <Link to={"/countries"} className="nav-link">Countries</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={"/payment-type"} className="nav-link">Payment type</Link>
+                            <Link to={"/payment-types"} className="nav-link">Payment types</Link>
                         </li>
                         <li className="nav-item">
                             <Link to={"/invoices"} className="nav-link">Invoices</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to={"/tariffs"} className="nav-link">Tariffs</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={"/vats"} className="nav-link">Vats</Link>
+                        </li>
                     </ul>
                 </nav>
-                <h1>Hello world!</h1>
+                <h1>Invoice system</h1>
                 <Switch>
-                    <Route path={"/company"} component={CompanyIndex} />
-                    <Route path={"/country"} component={CountryIndex} />
-                    <Route path={"/payment-type"} component={PaymentTypeIndex} />
+                    <Route path={"/companies"} component={CompanyIndex} />
+                    <Route path={"/countries"} component={CountryIndex} />
+                    <Route path={"/payment-types"} component={PaymentTypeIndex} />
                     <Route path={"/invoices"} component={InvoiceIndex} />
+                    <Route path={"/tariffs"} component={TariffIndex} />
+                    <Route path={"/vats"} component={VatIndex} />
                 </Switch>
-                <Redirect from="/" to="/company"/>
+                <Redirect from="/" to="/companies"/>
             </Router>
 
         );
