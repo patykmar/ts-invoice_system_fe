@@ -42,7 +42,7 @@ export default class CompanyIndex extends React.Component<CompanyIndexProps, Com
     render = () => {
         return (
             <div>
-                <h3>Country - Index</h3>
+                <h3>Company - Index</h3>
                 <Table striped bordered hover>
                     <thead>
                     <tr>
