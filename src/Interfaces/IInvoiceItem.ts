@@ -1,0 +1,18 @@
+export interface IInvoiceItem{
+    id: number,
+    invoice: {},
+    vat: {},
+    name: string,
+    price: number,
+    margin: number,
+    marginTotal: number,
+    priceIncMargin: number,
+    discount: number,
+    discountTotal: number,
+    priceIncMarginMinusDiscount: number,
+    priceIncMarginDiscountMultiVat: number,
+    priceIncMarginMultiVat: number,
+    unitCount: number,
+    totalPriceIncMarginDiscountVat: number,
+    totalPriceIncMarginVat: number,
+}

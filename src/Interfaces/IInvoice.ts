@@ -1,0 +1,16 @@
+export interface IInvoice{
+    id: number,
+    supplier: {},
+    subscriber: {},
+    paymentType: {},
+    userCreated: {},
+    workInventoryList: [],
+    invoiceItemList: [],
+    name: string,
+    due: number,
+    invoiceCreated: Date,
+    dueDate: Date,
+    paymentDate: Date,
+    vs: string,
+    ks: string,
+}
