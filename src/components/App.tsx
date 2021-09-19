@@ -4,6 +4,7 @@ import { Nav } from 'react-bootstrap';
 import CompanyIndex from './company/CompanyIndex';
 import CountryIndex from './country/CountryIndex';
 import PaymentTypeIndex from './paymentType/PaymentTypeIndex';
+import InvoiceIndex from './invoice/InvoiceIndex';
 
 export default class App extends React.Component<any, any> {
     render = () => {
@@ -20,6 +21,9 @@ export default class App extends React.Component<any, any> {
                         <li className="nav-item">
                             <Link to={"/payment-type"} className="nav-link">Payment type</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to={"/invoices"} className="nav-link">Invoices</Link>
+                        </li>
                     </ul>
                 </nav>
                 <h1>Hello world!</h1>
@@ -27,6 +31,7 @@ export default class App extends React.Component<any, any> {
                     <Route path={"/company"} component={CompanyIndex} />
                     <Route path={"/country"} component={CountryIndex} />
                     <Route path={"/payment-type"} component={PaymentTypeIndex} />
+                    <Route path={"/invoices"} component={InvoiceIndex} />
                 </Switch>
                 <Redirect from="/" to="/company"/>
             </Router>
