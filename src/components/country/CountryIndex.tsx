@@ -6,13 +6,13 @@ interface CountryIndexProps {
 }
 
 interface CountryIndexState {
-    companyList: ICountry[]
+    countryList: ICountry[]
 }
 
 export default class CountryIndex extends React.Component<CountryIndexProps, CountryIndexState> {
 
     state: CountryIndexState = {
-        companyList: []
+        countryList: []
     };
 
     constructor(props: CountryIndexProps) {
@@ -20,7 +20,7 @@ export default class CountryIndex extends React.Component<CountryIndexProps, Cou
     }
 
     componentDidMount = () => {
-        const companyList_local: ICountry[] = [
+        const countryList_local: ICountry[] = [
             {id: 1, name: "CZE", iso3166alpha3: "Česká republika"},
             {id: 2, name: "CZE", iso3166alpha3: "Česká republika"},
             {id: 3, name: "POL", iso3166alpha3: "Polská republika"},
@@ -28,7 +28,7 @@ export default class CountryIndex extends React.Component<CountryIndexProps, Cou
             {id: 5, name: "DEU", iso3166alpha3: "Spolková republika Německo"},
         ];
         this.setState({
-            companyList: companyList_local
+            countryList: countryList_local
         });
     }
 
@@ -47,7 +47,7 @@ export default class CountryIndex extends React.Component<CountryIndexProps, Cou
                     </thead>
                     <tbody>
                     {
-                        this.state.companyList.map((item: ICountry, index: number) =>
+                        this.state.countryList.map((item: ICountry, index: number) =>
                             <tr key={index + 1}>
                                 <td>{index + 1}</td>
                                 <td>{item.name}</td>
