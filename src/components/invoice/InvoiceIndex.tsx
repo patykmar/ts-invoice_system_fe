@@ -1,6 +1,5 @@
 import React from "react";
 import {Button, Table} from "react-bootstrap";
-import { IPaymentType } from "../../Interfaces/IPaymentType";
 
 interface PaymentTypeProps {
 }
@@ -50,7 +49,7 @@ export default class InvoiceIndex extends React.Component<PaymentTypeProps, Paym
     render = () => {
         return (
             <div>
-                <h3>Country - Index</h3>
+                <h3>Invoices</h3>
                 <Table striped bordered hover>
                     <thead>
                     <tr>
