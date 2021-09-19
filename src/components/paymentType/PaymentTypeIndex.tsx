@@ -1,6 +1,5 @@
 import React from "react";
 import {Button, Table} from "react-bootstrap";
-import { IPaymentType } from "../../Interfaces/IPaymentType";
 
 interface PaymentTypeProps {
 }
@@ -32,7 +31,7 @@ export default class PaymentTypeIndex extends React.Component<PaymentTypeProps, 
     render = () => {
         return (
             <div>
-                <h3>Country - Index</h3>
+                <h3>Payment types</h3>
                 <Table striped bordered hover>
                     <thead>
                     <tr>
